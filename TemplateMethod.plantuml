@@ -1,0 +1,24 @@
+@startuml
+
+    class BookHolidayWithHook {
+    +addInsurance():void
+    +getCustomerDetails():String
+    }
+
+    class Driver {
+
+    }
+
+    abstract class HolidayBuilder {
+    +{final}buildHolidayPackage():void
+    +addCustomerName():void
+    +addDays():void
+    +customerWantsInsurance():boolean
+    +{abstract}addInsurance():void
+    +{abstract}getCustomerDetails():String
+    }
+  
+
+  BookHolidayWithHook -up-|> HolidayBuilder
+
+@enduml
